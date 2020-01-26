@@ -2,7 +2,7 @@ import numpy as np
 from PIL import Image
 
 from Image_Encryption import (str2bin, bin2str,
-                              encode_img, decode_image,
+                              encode_img, decode_img,
                               encrypt_msg, decrypt_msg)
 
 
@@ -29,7 +29,7 @@ if __name__ == '__main__':
     # encoded_pil.save('imgs/cat_encoded.png')
 
     # decode back out of image
-    binary_msg_out = decode_image(encoded_img)
+    binary_msg_out = decode_img(encoded_img)
     print(f'\n\nBinary msg out: {binary_msg_out}')
     assert binary_msg_out == binary_msg_in
 

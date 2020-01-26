@@ -20,7 +20,7 @@ def encode_img(img_array, binary):
     return img_array
 
 
-def decode_image(img_array):
+def decode_img(img_array):
     'converts the given image into binary'
     bin_arr = img_array.reshape(-1, 3).sum(axis=1) % 2
     bin_str = ''.join([str(c) for c in bin_arr])

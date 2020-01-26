@@ -35,12 +35,3 @@ def decrypt_msg(msg, password):
     assert isinstance(msg, bytes)
     f = Fernet(pass_to_key(password))
     return f.decrypt(msg)
-
-
-if __name__ == '__main__':
-    msg = b'I am a tea pot'
-    print(f'\n\nOriginal msg: {msg, type(msg)}')
-    encrypted_msg = encrypt_msg(msg, 'test_password')
-    print(f'\n\nEncrypted msg: {encrypted_msg, type(encrypted_msg)}')
-    decrypted_msg = decrypt_msg(encrypted_msg, 'test_password')
-    print(f'\n\nDecrypted msg: {decrypted_msg, type(decrypted_msg)}')
